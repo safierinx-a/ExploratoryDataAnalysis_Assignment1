@@ -22,13 +22,13 @@ png(file = "plot4.png", width = 480, height = 480)
 par(mfrow=c(2,2))
 
 plot(datetime, x$Global_active_power , col = 'black', type= "l", ylab = 'Energy sub metering', xlab = "")
-plot(datetime, x$Voltage , col = 'black', type= "l", ylab = 'Energy sub metering', xlab = "")
+plot(datetime, x$Voltage , col = 'black', type= "l", ylab = 'Energy sub metering', xlab = "datetime")
 plot(datetime, x$Sub_metering_1 , col = 'black', type= "l", ylab = 'Energy sub metering', xlab = "")
 lines(datetime, x$Sub_metering_2 , col = 'red', type= "l", ylab = 'Energy sub metering', xlab = "")
 lines(datetime, x$Sub_metering_3 , col = 'blue', type= "l", ylab = 'Energy sub metering', xlab = "")
 legend(x= "topright", y=0.92, legend=c("Sub_metering_1", "Sub_metering_2", "Sub_metering_3"),
        col=c("black", "red", "blue"),  lty=1:2, cex=0.4)
-plot(datetime, x$Global_reactive_power , col = 'black', type= "l", ylab = 'Energy sub metering', xlab = "")
+plot(datetime, x$Global_reactive_power , col = 'black', type= "l", ylab = 'Energy sub metering', xlab = "datetime")
 
 dev.off()
 
